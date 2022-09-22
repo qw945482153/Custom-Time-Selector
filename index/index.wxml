@@ -1,0 +1,46 @@
+<view class="intro">
+  <view class="intro-top">
+    <view class="intro-top-box" data-id="0" bindtap="dealTime">
+      今日
+    </view>
+    <view class="intro-top-box" data-id="1" bindtap="dealTime">
+      最近一周
+    </view>
+    <view class="intro-top-box"  data-id="2" bindtap="dealTime">
+      最近一月
+    </view>
+  </view>
+  <view class="intro-chose">
+    <view class="{{current==0?'intro-chose_date':'intro-chose_date1'}}" data-id="0" bindtap="changecurrent"  >
+      {{start_date}}
+    </view>
+    <view class="intro-chose_center" data-id="1">
+      至
+    </view>
+    <view class="intro-chose_date" class="{{current==1?'intro-chose_date':'intro-chose_date1'}}" data-id="1"  bindtap="changecurrent" >
+      {{end_date}}
+    </view>
+  </view>
+  <view style="margin-top: 60rpx;">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 250rpx;" value="{{init}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{yearlist}}" wx:key="{{index}}" style="line-height: 50px; text-align: center;">{{item.year}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{monthlist}}" wx:key="{{index}}" style="line-height: 50px; text-align: center;">{{item.month}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{daylist}}" wx:key="{{index}}" style="line-height: 50px; text-align: center;">{{item}}日</view>
+      </picker-view-column>
+      <picker-view-column wx:if="{{type==1}}">
+        <view wx:for="{{hourlist}}" wx:key="{{index}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column  wx:if="{{type==1}}">
+        <view wx:for="{{minutelist}}" wx:key="{{index}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column  wx:if="{{type==1}}">
+        <view wx:for="{{minlist}}" wx:key="{{index}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

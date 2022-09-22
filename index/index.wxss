@@ -1,0 +1,39 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.intro-top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+.intro-top-box{
+  flex: 1;
+  text-align: center;
+  line-height: 70rpx;
+  margin-right: 20rpx;
+  background: rgb(244,244,244);
+  font-size: 22rpx;
+}
+.intro-chose{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.intro-chose_date{
+  width: 40%;
+  height: 70rpx;
+  border-bottom: 1rpx solid rgb(27, 151, 223);
+  color: rgb(27, 151, 223);
+}
+.intro-chose_date1{
+  width: 40%;
+  height: 70rpx;
+  border-bottom: 1rpx solid rgb(104, 103, 103);
+  color:rgb(104, 103, 103) ;
+}
+.intro-chose_center{
+  line-height: 70rpx;
+  text-align: center;
+}
